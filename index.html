@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Living Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/forever-logo.png" alt="Forever Living">
+                <h1>Forever Living Products</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Natural Health & Wellness Products</h2>
+            <p>Discover our range of high-quality aloe vera based products</p>
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <img src="images/aloe-vera-gel.jpg" alt="Forever Aloe Vera Gel">
+                <h3>Forever Aloe Vera Gel</h3>
+                <p class="price">40,707 Rwf</p>
+                <div class="benefits">
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Helps with digestive issues</li>
+                        <li>Boosts energy levels</li>
+                        <li>Supports immune system</li>
+                        <li>Promotes gut health</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/250785528791" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/bright-toothgel.jpg" alt="Forever Bright Toothgel">
+                <h3>Forever Bright® Toothgel</h3>
+                <p class="price">14,000 Rwf</p>
+                <div class="benefits">
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Natural ingredients</li>
+                        <li>Fluoride-free formula</li>
+                        <li>Freshens breath</li>
+                        <li>Promotes healthy gums</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/250785528791" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/aloe-lips.jpg" alt="Aloe Lips">
+                <h3>Aloe Lips</h3>
+                <p class="price">6,000 Rwf</p>
+                <div class="benefits">
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Deep moisturization</li>
+                        <li>Healing properties</li>
+                        <li>Environmental protection</li>
+                        <li>Natural ingredients</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/250785528791" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/ever-shield.jpg" alt="Aloe Ever-Shield">
+                <h3>Aloe Ever-Shield Deodorant</h3>
+                <p class="price">10,000 Rwf</p>
+                <div class="benefits">
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Contains Aloe Vera</li>
+                        <li>Long-lasting protection</li>
+                        <li>Non-staining formula</li>
+                        <li>Alcohol-free</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/250785528791" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/kids-multivitamins.jpg" alt="Forever Kids Multivitamins">
+                <h3>Forever Kids Multivitamins</h3>
+                <p class="price">25,000 Rwf</p>
+                <div class="benefits">
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Supports immune function</li>
+                        <li>Enhances cognitive development</li>
+                        <li>Promotes bone health</li>
+                        <li>Rich in phytonutrients</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/250785528791" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@foreverproducts.com</p>
+                <p>Phone: +250 785528791</p>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Forever Living Products. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/250785528791" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Product card reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+
+        // WhatsApp button click animation
+        document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html> 
